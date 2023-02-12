@@ -27,7 +27,8 @@ public class LogInController implements Initializable {
         model = new AppModel();
     }
 
-    public void logIn(ActionEvent actionEvent) {
+    public void logIn(ActionEvent actionEvent)
+    {
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
@@ -56,7 +57,8 @@ public class LogInController implements Initializable {
         }
     }
 
-    public void signUp(ActionEvent actionEvent) {
+    public void signUp(ActionEvent actionEvent)
+    {
         System.out.println("Sign-Up");
     }
 
