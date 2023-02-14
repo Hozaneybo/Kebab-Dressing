@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,9 +11,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Circle?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="920.0" stylesheets="@scratch.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MainViewController">
    <children>
-      <GridPane layoutX="104.0" layoutY="41.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="70.0">
+      <GridPane fx:id="gridPane" layoutX="104.0" layoutY="41.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="70.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -55,32 +56,55 @@
             <ImageView fitHeight="203.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </GridPane>
-      <Label layoutX="70.0" layoutY="14.0" text="Home" textFill="#b90020">
+      <Label layoutX="70.0" layoutY="14.0" onMouseClicked="#getHome" text="Home" textFill="#b90020">
          <padding>
             <Insets right="50.0" />
          </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
-      <Label layoutX="153.0" layoutY="14.0" text="History" textFill="#b90020">
+      <Label layoutX="153.0" layoutY="14.0" onMouseClicked="#getHistory" text="History" textFill="#b90020">
          <padding>
             <Insets right="50.0" />
          </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
-      <Label layoutX="480.0" layoutY="14.0" text="Suggested movies" textFill="#b90020" />
-      <Label layoutX="363.0" layoutY="14.0" text="Similar users" textFill="#b90020">
+      <Label layoutX="480.0" layoutY="14.0" onMouseClicked="#getSuggestmovies" text="Suggested movies" textFill="#b90020">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label layoutX="363.0" layoutY="14.0" onMouseClicked="#getSimilarusers" text="Similar users" textFill="#b90020">
          <padding>
             <Insets right="50.0" />
          </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
-      <Label layoutX="241.0" layoutY="14.0" text="Highest rated" textFill="#b90020">
+      <Label layoutX="241.0" layoutY="14.0" onMouseClicked="#getHighestrated" text="Highest rated" textFill="#b90020">
          <padding>
             <Insets right="50.0" />
          </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
-      <Label layoutX="807.0" layoutY="28.0" text="Log out" textFill="#b90020" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="28.0" />
+      <Label layoutX="807.0" layoutY="28.0" onMouseClicked="#getLogout" text="Log out" textFill="#b90020" AnchorPane.rightAnchor="72.0" AnchorPane.topAnchor="28.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
       <Circle fill="WHITE" layoutX="884.0" layoutY="36.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
-      <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="868.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="20.0">
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="870.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="21.0">
          <image>
+            <Image url="@../../../../Image/designAndLogo/l0fDaJnm_400x400.jpg" />
          </image>
       </ImageView>
+      <ImageView fitHeight="138.0" fitWidth="235.0" layoutX="675.3999999999994" layoutY="310.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="9.600000000000591">
+         <image>
+            <Image url="@../../../../Image/designAndLogo/Skrmbillede_2023-02-14_120658.png" />
+         </image></ImageView>
    </children>
 </AnchorPane>
