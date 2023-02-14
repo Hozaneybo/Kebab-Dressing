@@ -3,6 +3,7 @@ package dk.easv.presentation.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -51,14 +52,21 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
-    void getLogout(MouseEvent event) throws IOException {
+    void getLogout(MouseEvent event)  {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/LogIn.fxml"));
-        Parent root = loader.load();
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.setTitle("Movie Recommendation System 0.01 Beta");
         stage.show();
+        Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage1.close();
 
 
     }
